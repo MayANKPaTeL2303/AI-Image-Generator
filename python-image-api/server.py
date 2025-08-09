@@ -17,11 +17,9 @@ client = genai.Client(api_key=API_KEY)
 
 app = FastAPI()
 
-# Add CORS middleware **after** app is created
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # your Next.js frontend URL
-    allow_credentials=True,
+    allow_origins=["http://localhost:3000"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
